@@ -1,11 +1,20 @@
 /* General page settings */
 body {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    background-color: #0c110d;
-    color: #3ac0da;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-theme {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #f4f4f4;
 }
 
 /* Sidebar styling */
@@ -15,6 +24,7 @@ body {
     position: fixed;
     background-color: #333;
     padding-top: 20px;
+    transition: background-color 0.3s;
 }
 
 .sidebar a {
@@ -27,7 +37,7 @@ body {
 }
 
 .sidebar a:hover {
-    background-color: #3fb0d0;
+    background-color: #575757;
 }
 
 /* Main content styling */
@@ -47,12 +57,36 @@ p {
     line-height: 1.6;
 }
 
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
 footer {
-    background-color: #3ac0da;
+    background-color: #333;
     color: white;
     padding: 10px;
     position: fixed;
     bottom: 0;
     width: calc(100% - 200px);
     text-align: center;
+    transition: background-color 0.3s;
 }
+
+footer.light-theme {
+    background-color: #333;
+}
+
+footer.dark-theme {
+    background-color: #000;
+}
+
