@@ -6,7 +6,7 @@
     <title>Page 1</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light-theme">
     <div class="sidebar">
         <a href="index.html">Home</a>
         <a href="page1.html">Page 1</a>
@@ -16,6 +16,7 @@
         <a href="page5.html">Page 5</a>
         <a href="page6.html">Page 6</a>
         <a href="page7.html">Page 7</a>
+        <a href="settings.html">Settings</a>
     </div>
 
     <div class="main-content">
@@ -24,7 +25,15 @@
     </div>
 
     <footer>
-        &copy; skibidi rizz
+        &copy; 2024 My Website
     </footer>
+
+    <script>
+        // Apply the saved theme from localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.remove('light-theme');
+            document.body.classList.add('dark-theme');
+        }
+    </script>
 </body>
 </html>
