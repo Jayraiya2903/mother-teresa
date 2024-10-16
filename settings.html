@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <div class="sidebar">
+        <a href="index.html">Home</a>
+        <a href="page1.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+        <a href="page3.html">Page 3</a>
+        <a href="page4.html">Page 4</a>
+        <a href="page5.html">Page 5</a>
+        <a href="page6.html">Page 6</a>
+        <a href="page7.html">Page 7</a>
+        <a href="settings.html">Settings</a> <!-- New Settings Page Link -->
+    </div>
+
+    <div class="main-content">
+        <h1>Settings</h1>
+        <p>Change the website theme using the button below.</p>
+        <button id="themeButton">Switch to Dark Theme</button>
+    </div>
+
+    <footer>
+        &copy; 2024 My Website
+    </footer>
+
+    <script>
+        const themeButton = document.getElementById('themeButton');
+        const body = document.body;
+
+        // Check if a theme is saved in localStorage and apply it
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.remove('light-theme');
+            body.classList.add('dark-theme');
+            themeButton.textContent = 'Switch to Light Theme';
+        }
+
+        // Theme switcher button functionality
+        themeButton.addEventListener('click', () => {
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                themeButton.textContent = 'Switch to Light Theme';
+                localStorage.setItem('theme', 'dark'); // Save theme preference
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+                themeButton.textContent = 'Switch to Dark Theme';
+                localStorage.setItem('theme', 'light'); // Save theme preference
+            }
+        });
+    </script>
+</body>
+</html>
