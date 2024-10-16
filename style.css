@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    background-color: #f4f4f4;
+    background-color: #0c110d;
     color: #333;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 .sidebar a:hover {
-    background-color: #575757;
+    background-color: #3fb0d0;
 }
 
 /* Main content styling */
