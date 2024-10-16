@@ -6,7 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light-theme">
     <div class="sidebar">
         <a href="index.html">Home</a>
         <a href="page1.html">Page 1</a>
@@ -19,13 +19,36 @@
     </div>
 
     <div class="main-content">
-        <h1>Ever Wondered how to mew? jealous others have an imaculate jawline?</h1>
-        <p>well this is for you! use this website to learn how to rizz up minors like joeseph laglas</p>
+        <h1>Welcome to My Website</h1>
+        <p>This is the home page. Use the sidebar to navigate through different pages.</p>
+        <button id="themeButton">Switch to Dark Theme</button>
     </div>
 
-    <footer>
+    <footer class="light-theme">
         &copy; 2024 My Website
     </footer>
+
+    <script>
+        const themeButton = document.getElementById('themeButton');
+        const body = document.body;
+        const footer = document.querySelector('footer');
+
+        themeButton.addEventListener('click', () => {
+            // Toggle theme
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                footer.classList.remove('light-theme');
+                footer.classList.add('dark-theme');
+                themeButton.textContent = 'Switch to Light Theme';
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+                footer.classList.remove('dark-theme');
+                footer.classList.add('light-theme');
+                themeButton.textContent = 'Switch to Dark Theme';
+            }
+        });
+    </script>
 </body>
 </html>
-
