@@ -16,39 +16,24 @@
         <a href="page5.html">Page 5</a>
         <a href="page6.html">Page 6</a>
         <a href="page7.html">Page 7</a>
+        <a href="settings.html">Settings</a> <!-- Link to the Settings Page -->
     </div>
 
     <div class="main-content">
         <h1>Welcome to My Website</h1>
         <p>This is the home page. Use the sidebar to navigate through different pages.</p>
-        <button id="themeButton">Switch to Dark Theme</button>
     </div>
 
-    <footer class="light-theme">
+    <footer>
         &copy; 2024 My Website
     </footer>
 
     <script>
-        const themeButton = document.getElementById('themeButton');
-        const body = document.body;
-        const footer = document.querySelector('footer');
-
-        themeButton.addEventListener('click', () => {
-            // Toggle theme
-            if (body.classList.contains('light-theme')) {
-                body.classList.remove('light-theme');
-                body.classList.add('dark-theme');
-                footer.classList.remove('light-theme');
-                footer.classList.add('dark-theme');
-                themeButton.textContent = 'Switch to Light Theme';
-            } else {
-                body.classList.remove('dark-theme');
-                body.classList.add('light-theme');
-                footer.classList.remove('dark-theme');
-                footer.classList.add('light-theme');
-                themeButton.textContent = 'Switch to Dark Theme';
-            }
-        });
+        // Apply the saved theme from localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.remove('light-theme');
+            document.body.classList.add('dark-theme');
+        }
     </script>
 </body>
 </html>
