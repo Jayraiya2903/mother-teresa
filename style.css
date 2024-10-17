@@ -78,15 +78,39 @@ body.dark-theme {
 /* Drawer Menu */
 .drawer {
     position: fixed;
+    left: 0;
     top: 0;
     left: -250px;
     width: 250px;
     height: 100%;
     background-color: #1e90ff;
     color: white;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
     transition: 0.3s;
     padding-top: 60px;
     z-index: 1000;
+}
+
+.sidebar li {
+    margin: 10px 0;
+.drawer ul {
+    list-style: none;
+}
+
+.sidebar a {
+.drawer ul li a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+.drawer.open {
+    left: 0;
 }
 
 .drawer ul {
