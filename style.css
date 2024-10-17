@@ -9,7 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #284dfe;
-    background: url('IMAGE.png') no-repeat center center/cover; /* Add background image */
+    background: url('IMAGE.jpg') no-repeat center center/cover; /* Add background image */
     background-attachment: fixed; /* Fix the background on scroll */
     margin: 0;
     padding: 0;
