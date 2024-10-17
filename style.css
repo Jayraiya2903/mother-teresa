@@ -1,135 +1,87 @@
-/* Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #284dfe;
-    background: url('IMAGE.jpg') no-repeat center center/cover; /* Add background image */
-    background-attachment: fixed; /* Fix the background on scroll */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* Apply background and blur only to the homepage */
+#homepage {
+    background: url('your-image.jpg') no-repeat center center/cover;
     position: relative;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-body::before {
-    content: '';
+#homepage::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
-    backdrop-filter: blur(8px); /* Add the blur effect */
-    z-index: -1; /* Ensure it stays behind the content */
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2); /* Optional: add transparency */
+    z-index: -1; /* Make sure the blur stays behind the content */
 }
 
-body.light-theme {
-    background-color: #f4f4f4;
+/* General styling for all pages */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     color: #284dfe;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-body.dark-theme {
+/* Sidebar styling */
+.sidebar {
     background-color: #284dfe;
-    color: #f4f4f4;
-}
-
-.top-banner {
-    background-color: rgba(30, 144, 255, 0.8); /* Make the banner semi-transparent */
-    color: white;
-    padding: 30px;
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    width: 100%;
-    box-shadow: 0 4px 2px -2px gray;
-    position: relative;
-    z-index: 1000;
-}
-
-/* Drawer Menu Button */
-#menu-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 28px;
-    position: fixed;
-    top: 15px;
-    left: 20px;
-    cursor: pointer;
-    outline: none;
-    padding: 10px;
-    transition: transform 0.2s ease;
-    z-index: 1001;
-}
-
-#menu-btn:hover {
-    transform: scale(1.1);
-}
-
-/* Drawer Menu */
-.drawer {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #1e90ff;
-    color: white;
-    transition: 0.3s;
-    padding-top: 60px;
-    z-index: 1000;
-}
-
-.drawer ul {
-    list-style: none;
-}
-
-.drawer ul li a {
-    display: block;
     padding: 15px;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: white;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
     color: white;
     text-decoration: none;
 }
 
-.drawer.open {
-    left: 0;
+.sidebar a:hover {
+    text-decoration: underline;
 }
 
-/* Main content styling */
+/* Main content */
 .main-content {
     margin-left: 220px;
     padding: 20px;
     flex: 1;
-    z-index: 10;
 }
 
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-/* Footer */
+/* Footer styling */
 footer {
     background-color: #284dfe;
     color: white;
+    text-align: center;
     padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
-    text-align: center;
-    z-index: 10;
 }
+
+/* Theme styles */
+.light-theme {
+    background-color: #f4f4f4;
+    color: black;
+}
+
+.dark-theme {
+    background-color: #1a1a1a;
+    color: white;
+}
+
