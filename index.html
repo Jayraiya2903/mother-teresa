@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="style.css">
      <style>
         /* Banner Styling */
-        .banner {
-            background-color: #1e90ff; /* A sky-blue background */
-            color: white; /* White text color */
-            padding: 5px;
-            text-align: center;
-            font-size: 1em;
-            font-weight: bold;
-            width: 100%;
-            box-shadow: 0px 4px 2px -2px gray; /* Add a shadow for depth */
+       .top-banner {
+        background-color: #1e90ff; /* Sky-blue background */
+        color: white;              /* White text */
+        padding: 20px;             /* Padding for spacing */
+        text-align: center;        /* Center the text */
+        font-size: 2em;            /* Increase font size */
+        font-weight: bold;         /* Make text bold */
+        width: 100%;               /* Stretch across the full width */
+        box-shadow: 0 4px 2px -2px gray; /* Add a shadow for depth */
+        position: relative;        /* Ensure proper positioning */
+        top: 0;                    /* Stick to the top */
+        z-index: 1000;             /* Ensure it stays on top */
         }
 
         /* Adjustments for responsiveness */
@@ -29,9 +32,9 @@
 <body class="light-theme">
     <header>
         <button id="menu-btn" onclick="toggleDrawer()">&#9776;</button> <!-- Drawer toggle button -->
-            <div class="banner">
-    <h1>Welcome to My Website</h1>
-    </div>
+           <div class="top-banner">
+    Welcome to My Website
+</div>
     <div class="main-content">
       
     </header>
