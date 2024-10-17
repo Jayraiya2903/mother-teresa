@@ -8,7 +8,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #284dfe;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -18,11 +18,11 @@ body {
 
 body.light-theme {
     background-color: #f4f4f4;
-    color: #333;
+    color: #284dfe;
 }
 
 body.dark-theme {
-    background-color: #333;
+    background-color: #284dfe;
     color: #f4f4f4;
 }
 
@@ -44,7 +44,7 @@ header h1 {
     height: 100vh;
     width: 200px;
     position: fixed;
-    background-color: #333;
+    background-color: #284dfe;
     padding-top: 20px;
     transition: background-color 0.3s;
 }
@@ -204,7 +204,7 @@ section {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #284dfe;
     color: white;
     padding: 10px;
     position: fixed;
@@ -215,7 +215,7 @@ footer {
 }
 
 footer.light-theme {
-    background-color: #333;
+    background-color: #284dfe;
 }
 
 footer.dark-theme {
