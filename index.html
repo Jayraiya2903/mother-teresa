@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="light-theme">
-    <div class="sidebar">
-        <a href="index.html">Home</a>
-        <a href="page1.html">Page 1</a>
-        <a href="page2.html">Page 2</a>
-        <a href="page3.html">Page 3</a>
-        <a href="page4.html">Page 4</a>
-        <a href="page5.html">Page 5</a>
-        <a href="page6.html">Page 6</a>
-        <a href="page7.html">Page 7</a>
-        <a href="settings.html">Settings</a> <!-- Link to the Settings Page -->
-    </div>
+    <header>
+        <button id="menu-btn" onclick="toggleDrawer()">&#9776;</button> <!-- Drawer toggle button -->
+        <div class="container">
+            <h1>Welcome to My Website</h1>
+        </div>
+    </header>
+
+    <!-- Drawer Menu -->
+    <aside id="drawer" class="drawer">
+        <ul>
+            <li><a href="index.html" onclick="toggleDrawer()">Home</a></li>
+            <li><a href="page1.html" onclick="toggleDrawer()">Page 1</a></li>
+            <li><a href="page2.html" onclick="toggleDrawer()">Page 2</a></li>
+            <li><a href="page3.html" onclick="toggleDrawer()">Page 3</a></li>
+            <li><a href="page4.html" onclick="toggleDrawer()">Page 4</a></li>
+            <li><a href="page5.html" onclick="toggleDrawer()">Page 5</a></li>
+            <li><a href="page6.html" onclick="toggleDrawer()">Page 6</a></li>
+            <li><a href="page7.html" onclick="toggleDrawer()">Page 7</a></li>
+            <li><a href="settings.html" onclick="toggleDrawer()">Settings</a></li>
+        </ul>
+    </aside>
 
     <div class="main-content">
         <h1>Welcome to My Website</h1>
-        <p>This is the home page. Use the sidebar to navigate through different pages.</p>
+        <p>This is the home page. Use the sidebar or drawer to navigate through different pages.</p>
     </div>
 
     <footer>
@@ -33,6 +43,12 @@
         if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.remove('light-theme');
             document.body.classList.add('dark-theme');
+        }
+
+        // Function to toggle the drawer
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            drawer.classList.toggle('open');
         }
     </script>
 </body>
