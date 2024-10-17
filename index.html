@@ -4,28 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
 </head>
-<body id="homepage" class="light-theme">
-    <div class="sidebar">
-        <li><a href="index.html">Abhaile</a></li>
-        <li><a href="page1.html">Tosnú Saol</a></li>
-        <li><a href="page2.html">Missionaries of Charity​</a></li>
-        <li><a href="page3.html">Carthanacht idirnáisiúnta​​</a></li>
-        <li><a href="page4.html">Drochshláinte agus Bás</a></li>
-        <li><a href="page5.html">An Catharnacht Tar éis Mother Teresa</a></li>
-        <li><a href="page6.html">Fíoraic</a></li>
-        <li><a href="page7.html">Oidhreacht</a></li>
-        <li><a href="settings.html">Athrithe</a></li>
-    </div>
+<body class="light-theme">
+    <header>
+        <button id="menu-btn" onclick="toggleDrawer()">&#9776;</button> <!-- Drawer toggle button -->
+        <div class="top-banner">
+            Welcome to My Website
+        </div>
+    </header>
 
+    <!-- Drawer Menu -->
+    <aside id="drawer" class="drawer">
+        <ul>
+            <li><a href="index.html" onclick="toggleDrawer()">Abhaile</a></li>
+            <li><a href="page1.html" onclick="toggleDrawer()">Tosnú Saol</a></li>
+            <li><a href="page2.html" onclick="toggleDrawer()">Missionaries of Charity​</a></li>
+            <li><a href="page3.html" onclick="toggleDrawer()">Carthanacht idirnáisiúnta​​</a></li>
+            <li><a href="page4.html" onclick="toggleDrawer()">Drochshláinte agus Bás</a></li>
+            <li><a href="page5.html" onclick="toggleDrawer()">An Catharnacht Tar éis Mother Teresa</a></li>
+            <li><a href="page6.html" onclick="toggleDrawer()">Fíoraic</a></li>
+            <li><a href="page7.html" onclick="toggleDrawer()">Oidhreacht</a></li>
+            <li><a href="settings.html" onclick="toggleDrawer()">Athrithe</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
     <div class="main-content">
-        <h1>Welcome to the Homepage</h1>
-        <p>This is the homepage content.</p>
+        <h1>Main Content Section</h1>
+        <p>This is where your content will appear. Add more information here for users to see when they visit your site.</p>
     </div>
 
     <footer>
-        &copy; 2024 My Website
+        &copy; Benjamin 🥶🥶🥶
     </footer>
 
     <script>
@@ -33,6 +44,12 @@
         if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.remove('light-theme');
             document.body.classList.add('dark-theme');
+        }
+
+        // Function to toggle the drawer
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            drawer.classList.toggle('open');
         }
     </script>
 </body>
