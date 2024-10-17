@@ -5,38 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
-     <style>
+    <style>
         /* Banner Styling */
-       .top-banner {
-        background-color: #1e90ff; /* Sky-blue background */
-        color: white;              /* White text */
-        padding: 20px;             /* Padding for spacing */
-        text-align: center;        /* Center the text */
-        font-size: 2em;            /* Increase font size */
-        font-weight: bold;         /* Make text bold */
-        width: 100%;               /* Stretch across the full width */
-        box-shadow: 0 4px 2px -2px gray; /* Add a shadow for depth */
-        position: relative;        /* Ensure proper positioning */
-        top: 0;                    /* Stick to the top */
-        z-index: 1000;             /* Ensure it stays on top */
+        .top-banner {
+            background-color: #1e90ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            width: 100%;
+            box-shadow: 0 4px 2px -2px gray;
+            position: relative;
+            z-index: 1000;
         }
 
         /* Adjustments for responsiveness */
         @media (max-width: 768px) {
-            .banner {
-                font-size: 1.5em; /* Smaller font size on mobile */
+            .top-banner {
+                font-size: 1.5em;
             }
         }
     </style>
 </head>
 <body class="light-theme">
     <header>
-        <button id="menu-btn" onclick="toggleDrawer()">&#9776;</button> <!-- Drawer toggle button -->
-           <div class="top-banner">
-    Welcome to My Website
-</div>
-    <div class="main-content">
-      
+        <button id="menu-btn" onclick="toggleDrawer()">&#9776;</button>
+        <div class="top-banner">
+            Welcome to My Website
+        </div>
     </header>
 
     <!-- Drawer Menu -->
@@ -54,6 +51,9 @@
         </ul>
     </aside>
 
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Content goes here -->
     </div>
 
     <footer>
@@ -75,3 +75,4 @@
     </script>
 </body>
 </html>
+
